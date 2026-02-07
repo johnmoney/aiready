@@ -1,0 +1,47 @@
+backend:
+  name: github
+  repo: johnmoney/aiready          # ← your repo
+  branch: main                     # or master/gh-pages if different
+  # Optional: squash commits for cleaner history
+  squash_merges: true
+
+# Media (images) — add if/when you want uploads
+media_folder: "images"     # where images save in repo
+public_folder: "/images"   # how they're served on site
+
+# Optional: enable drafts/review workflow (recommended for safety)
+publish_mode: editorial_workflow
+
+collections:
+  - name: "home"
+    label: "Home Page"
+    files:
+      - label: "Main Content"
+        name: "main"
+        file: "content/home.md"      # we'll create this file next
+        fields:
+          - {
+              label: "Hero Headline",
+              name: "hero_headline",
+              widget: "markdown",
+              default: "Prepare students for **AI Driven Careers** with Clarity",
+              buttons: ["bold", "italic", "link"],
+              modes: ["rich_text", "raw"]
+            }
+          - {label: "Hero Tagline / Subtitle", name: "hero_subtitle", widget: "markdown"}
+          - {label: "The Stakes Heading", name: "stakes_heading", widget: "string"}
+          - {label: "The Stakes Body Text", name: "stakes_body", widget: "markdown"}
+          - {label: "Guidance Heading", name: "guidance_heading", widget: "string"}
+          - {label: "Guidance Description", name: "guidance_desc", widget: "markdown"}
+          - {label: "Learning Heading", name: "learning_heading", widget: "string"}
+          - {label: "Learning Description", name: "learning_desc", widget: "markdown"}
+          - {label: "Programming Heading", name: "programming_heading", widget: "string"}
+          - {label: "Programming Description", name: "programming_desc", widget: "markdown"}
+          - {label: "For Schools Heading", name: "schools_heading", widget: "string"}
+          - {label: "For Schools Bullet Points", name: "schools_bullets", widget: "list", field: {widget: "string", label: "Benefit"}}
+          - {label: "The Challenge Heading", name: "challenge_heading", widget: "string"}
+          - {label: "Challenge Intro Text", name: "challenge_intro", widget: "markdown"}
+          - {label: "Challenge Stats / Bullets", name: "challenge_stats", widget: "list", field: {widget: "string", label: "Stat"}}
+          - {label: "Final CTA Button Text", name: "cta_button", widget: "string"}
+          - {label: "Final CTA Text", name: "cta_text", widget: "markdown"}
+          # Add more fields as needed — one per editable chunk

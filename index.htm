@@ -323,30 +323,21 @@
       <!-- Left Content -->
 
       <div class="text-center lg:text-left">
-
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-[var(--font-family-heading)] font-bold text-[var(--dark-text-color)] leading-tight mb-6">
-
+        <h1 id="hero-headline" class="text-4xl sm:text-5xl lg:text-6xl font-[var(--font-family-heading)] font-bold text-[var(--dark-text-color)] leading-tight mb-6">
           Prepare Students for
-
           <span class="text-[var(--primary-color)]">AI-Driven Careers</span>
-
           with Clarity and Confidence
-
         </h1>
 
         <p class="text-lg sm:text-xl text-[var(--gray-text-color)] font-[var(--font-family-body)] mb-1 leading-relaxed">
 Because the old way of choosing majors and careers no longer works
         </p>
-
-          
         <p class="text-lg sm:text-xl text-[var(--gray-text-color)] font-[var(--font-family-body)] mb-8 leading-relaxed">
 
 AI has changed the structure of work faster than advising models have changed. Students are now asked to commit to paths that may narrow sooner and recover more slowly than before.
 
 The AI Ready Institute helps schools, students, and families make decisions that reflect current economic reality—not inherited assumptions.
         </p>
-
-
 
         <!-- CTA Buttons -->
 
@@ -1208,14 +1199,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </div></div></div></div></div>
 
-  </body></html>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script type="module">
+  async function loadContent() {
+    try {
+      const res = await fetch('/content/home.md');
+      const text = await res.text();
+      const frontmatter = text.split('---')[1]?.trim() || '';
+      const data = {};
+      frontmatter.split('\n').forEach(line => {
+        const [key, ...valueParts] = line.split(/:(.+)/);
+        if (key?.trim()) data[key.trim()] = valueParts.join(':').trim();
+      });
+
+      // Parse markdown field to HTML
+      let headlineHtml = marked.parse(data.hero_headline || '', {
+        gfm: true,
+        breaks: true
+      });
+
+      // Replace <strong> with colored span (your CSS var)
+      headlineHtml = headlineHtml.replace(
+        /<strong>(.*?)<\/strong>/g,
+        '<span class="text-[var(--primary-color)] font-bold">$1</span>'
+      );
+
+      // Inject into DOM
+      const heroEl = document.getElementById('hero-headline');
+      if (heroEl) heroEl.innerHTML = headlineHtml;
 
 
+    } catch (e) {
+      console.error('Content load failed', e);
+    }
+  }
 
-
-
-
-
-
-
-
+  loadContent();
+</script>
+  </body>
+</html>
