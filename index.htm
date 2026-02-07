@@ -1132,25 +1132,44 @@
 
             <i class="fa-solid fa-envelope text-[var(--primary-color)] mt-1" aria-hidden="true"></i>
 
-            <a href="mailto:info@AI Ready Institute.edu" class="text-[var(--gray-text-color)] hover:text-white transition-colors">info@AI Ready Institute.edu</a>
+<a href="#" id="email-link" class="text-[var(--gray-text-color)] hover:text-white transition-colors">
+  Loading email...
+</a>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const link = document.getElementById('email-link');
+  
+  const user   = 'info';
+  const domain = 'AIReadyInstitute.org';
+  const email  = user + '@' + domain;
+  
+  // Display readable version with zero-width joiners between characters
+  const zwj = '\u200D';
+  link.textContent = email.split('').join(zwj);
+  
+  // Make it a real mailto link
+  link.href = 'mailto:' + email;
+  link.style.cursor = 'pointer';
+});
+</script>
           </li>
 
-          <li class="flex items-start gap-3">
+          <!-- li class="flex items-start gap-3">
 
             <i class="fa-solid fa-phone text-[var(--primary-color)] mt-1" aria-hidden="true"></i>
 
             <a href="tel:+1234567890" class="text-[var(--gray-text-color)] hover:text-white transition-colors">+1 (234) 567-890</a>
 
-          </li>
+        </li -->
 
-          <li class="flex items-start gap-3">
+          <!-- li class="flex items-start gap-3">
 
             <i class="fa-solid fa-location-dot text-[var(--primary-color)] mt-1" aria-hidden="true"></i>
 
             <span class="text-[var(--gray-text-color)]">Education District<br>Your City, State</span>
 
-          </li>
+        </li -->
 
         </ul>
 
@@ -1193,6 +1212,7 @@
 </div></div></div></div></div>
 
   </body></html>
+
 
 
 
