@@ -3,9 +3,7 @@ backend:
   repo: johnmoney/aiready
   branch: master
   client_id: Ov23li2yZCIcGOK8ZCRB
-  auth_type: implicit              # Simple, no server needed
-  base_url: https://johnmoney.github.io/aiready
-  site_domain: johnmoney.github.io
+  auth_type: pkce
   # Optional: squash commits for cleaner history
   squash_merges: true
 
