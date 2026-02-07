@@ -9,6 +9,18 @@
     <!-- <link rel="stylesheet" href="/css/editor.css"> -->
   </head>
   <body>
-    <!-- Decap CMS will mount here -->
-  </body>
+    <div id="nc-root"></div>
+    <script>
+      // Wait for DOM to be fully ready before init
+      document.addEventListener('DOMContentLoaded', function () {
+        // Optional: manual init flag if needed
+        window.CMS_MANUAL_INIT = true;
+
+        // Init Decap CMS (it will look for config.yml automatically)
+        CMS.init();
+
+        console.log('Decap CMS initialized manually');
+      });
+    </script>
+</body>
 </html>
