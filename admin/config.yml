@@ -38,10 +38,10 @@ collections:
           - {label: "Programming Heading", name: "programming_heading", widget: "string"}
           - {label: "Programming Description", name: "programming_desc", widget: "markdown"}
           - {label: "For Schools Heading", name: "schools_heading", widget: "string"}
-          - {label: "For Schools Bullet Points", name: "schools_bullets", widget: "list", field: {widget: "string", label: "Benefit"}}
+          - {label: "For Schools Bullet Points", name: "schools_bullets", widget: "list", field: {label: "Benefit", name: "benefit", widget: "string"}}
           - {label: "The Challenge Heading", name: "challenge_heading", widget: "string"}
           - {label: "Challenge Intro Text", name: "challenge_intro", widget: "markdown"}
-          - {label: "Challenge Stats / Bullets", name: "challenge_stats", widget: "list", field: {widget: "string", label: "Stat"}}
+          - {label: "Challenge Stats / Bullets", name: "challenge_stats", widget: "list", field: {label: "Stat", name: "stat", widget: "string"}}
           - {label: "Final CTA Button Text", name: "cta_button", widget: "string"}
           - {label: "Final CTA Text", name: "cta_text", widget: "markdown"}
           # Add more fields as needed — one per editable chunk
