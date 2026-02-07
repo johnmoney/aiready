@@ -1,13 +1,15 @@
 backend:
   name: github
-  repo: johnmoney/aiready          # ← your repo
-  branch: master                     # or master/gh-pages if different
+  repo: johnmoney/aiready
+  branch: master
+  client_id: Ov23li2yZCIcGOK8ZCRB
+  auth_type: implicit              # Simple, no server needed
   # Optional: squash commits for cleaner history
   squash_merges: true
 
 # Media (images) — add if/when you want uploads
-media_folder: "images"     # where images save in repo
-public_folder: "/images"   # how they're served on site
+media_folder: "images/uploads"     # where images save in repo
+public_folder: "/images/uploads"   # how they're served on site
 
 # Optional: enable drafts/review workflow (recommended for safety)
 publish_mode: editorial_workflow
