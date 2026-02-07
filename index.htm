@@ -264,7 +264,7 @@
 
         <!-- a href="/" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-[var(--font-family-body)] transition-colors">Blog</a -->
 
-        <a href="/" class="bg-[var(--primary-color)] text-[var(--primary-button-text-color)] px-6 py-3 rounded-[var(--button-rounded-radius)] font-[var(--font-family-body)] font-semibold hover:bg-[var(--primary-button-hover-bg-color)] transition-colors">Claim Your Free Consultation</a>
+        <a href="mailto:info@aireadyinstitute.org?subject=Free+consultation" class="bg-[var(--primary-color)] text-[var(--primary-button-text-color)] px-6 py-3 rounded-[var(--button-rounded-radius)] font-[var(--font-family-body)] font-semibold hover:bg-[var(--primary-button-hover-bg-color)] transition-colors">Claim Your Free Consultation</a>
 
       </nav>
 
@@ -296,7 +296,7 @@
 
         <!-- a href="/" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-[var(--font-family-body)] transition-colors">Blog</a -->
 
-        <a href="/" class="bg-[var(--primary-color)] text-[var(--primary-button-text-color)] px-6 py-3 rounded-[var(--button-rounded-radius)] font-[var(--font-family-body)] font-semibold hover:bg-[var(--primary-button-hover-bg-color)] transition-colors text-center">Claim Your Free Consultation</a>
+        <a href="mailto:info@aireadyinstitute.org" class="bg-[var(--primary-color)] text-[var(--primary-button-text-color)] px-6 py-3 rounded-[var(--button-rounded-radius)] font-[var(--font-family-body)] font-semibold hover:bg-[var(--primary-button-hover-bg-color)] transition-colors text-center">Claim Your Free Consultation</a>
 
       </div>
 
@@ -353,7 +353,7 @@ The AI Ready Institute helps schools, students, and families make decisions that
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
 
-          <a href="/" class="bg-[var(--primary-color)] text-[var(--primary-button-text-color)] px-8 py-4 rounded-[var(--button-rounded-radius)] font-[var(--font-family-body)] font-semibold hover:bg-[var(--primary-button-hover-bg-color)] transition-all transform hover:scale-105 shadow-lg text-center">
+          <a href="mailto:info@aireadyinstitute.org?subject=Free+consultation" class="bg-[var(--primary-color)] text-[var(--primary-button-text-color)] px-8 py-4 rounded-[var(--button-rounded-radius)] font-[var(--font-family-body)] font-semibold hover:bg-[var(--primary-button-hover-bg-color)] transition-all transform hover:scale-105 shadow-lg text-center">
 
             Get Your Free Consultation
 
@@ -925,10 +925,9 @@ The AI Ready Institute helps schools, students, and families make decisions that
 
     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
 
-      <a id="book-btn" href="/" class="bg-white text-[var(--primary-color)] px-8 py-4 rounded-[var(--button-rounded-radius)] font-[var(--font-family-body)] font-semibold hover:bg-[var(--light-background-color)] transition-all transform hover:scale-105 shadow-xl inline-flex items-center justify-center gap-2">
-
+      <a href="mailto:info@aireadyinstitute.org" class="bg-white text-[var(--primary-color)] px-8 py-4 rounded-[var(--button-rounded-radius)] font-[var(--font-family-body)] font-semibold hover:bg-[var(--light-background-color)] transition-all transform hover:scale-105 shadow-xl inline-flex items-center justify-center gap-2">
         
-
+        <i class="fa-solid fa-calendar" aria-hidden="true"></i>
         Book Your Free Consultation
 
       </a>
@@ -1140,7 +1139,6 @@ The AI Ready Institute helps schools, students, and families make decisions that
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const link = document.getElementById('email-link');
-  const bookBtn = document.getElementById('book-btn');
   
   const user   = 'info';
   const domain = 'AIReadyInstitute.org';
@@ -1151,11 +1149,6 @@ document.addEventListener('DOMContentLoaded', () => {
   link.textContent = email.split('').join(zwj);
   link.href = 'mailto:' + email;
   link.style.cursor = 'pointer';
-
-  bookBtn.textContent = '<i class="fa-solid fa-calendar" aria-hidden="true"></i>' + email.split('').join(zwj);
-  bookBtn.href = 'mailto:' + email;
-  bookBtn.style.cursor = 'pointer';
-
 });
 </script>
           </li>
@@ -1217,6 +1210,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div></div></div></div></div>
 
   </body></html>
+
 
 
 
