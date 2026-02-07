@@ -1,5 +1,5 @@
 ---
-hero_headline: Prepare students for **AI-Driven Careers** with Clarity
+hero_headline: Prepare students for **AI Driven Careers** with Clarity
 stakes_heading: The Stakes Have Never Been Higher
 stakes_body: |-
   AI is transforming every industry...
