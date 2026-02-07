@@ -4,23 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Ready Institute — Content Editor</title>
-    <script src="https://unpkg.com/decap-cms@3.10.0/dist/decap-cms.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@sveltia/cms@latest/dist/sveltia-cms.js" defer></script>
     <!-- Optional: custom styling if you want to match your site's look -->
     <!-- <link rel="stylesheet" href="/css/editor.css"> -->
   </head>
   <body>
-    <div id="nc-root"></div>
-    <script>
-      // Wait for DOM to be fully ready before init
-      document.addEventListener('DOMContentLoaded', function () {
-        // Optional: manual init flag if needed
-        window.CMS_MANUAL_INIT = true;
-
-        // Init Decap CMS (it will look for config.yml automatically)
-        CMS.init();
-
-        console.log('Decap CMS initialized manually');
-      });
-    </script>
-</body>
+  </body>
 </html>
