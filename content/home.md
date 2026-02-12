@@ -13,11 +13,11 @@ stakes_heading: The Stakes Have Never Been Higher
 stakes_body: |-
   AI is reshaping the world of work—and the old rules for choosing majors no longer apply. Students need more than degrees; they need judgment, adaptability, and real-world skills.
 guidance_heading: AI-Informed Guidance
-guidance_desc: Personalized roadmaps...
-learning_heading: x
-learning_desc: x
-programming_heading: The Stakes Have Never Been Higher
-programming_desc: AI is reshaping the world of work—and the old rules for choosing majors no longer apply. Students need more than degrees; they need judgment, adaptability, and real-world skills.
+guidance_desc: Help students understand which careers will thrive, which will transform, and which skills will remain irreplaceable in an AI-driven economy.
+learning_heading: Applied Learning Models
+learning_desc: Move beyond theory with hands-on programs that teach students to work with AI tools, think critically, and solve real problems.
+programming_heading: Strategic Programming
+programming_desc: Implement long-term strategies that prepare your institution and students for the future of work, not just the present.
 schools_heading: Partner with AI Ready Institute to Modernize Career Preparation
 challenge_heading: Why AI Changes Everything for Education
 challenge_intro: |-
