@@ -30,6 +30,8 @@ schools_bullets:
   - |-
     **Faculty Training**
     Equip educators with AI literacy and career guidance tools
+schools_button: Learn More About Our Services
+challenge_image: /images/uploads/students03.png
 challenge_heading: Why AI Changes Everything for Education
 challenge_intro: |-
   Traditional career advice assumes stable job markets and predictable skill demands. But AI is automating tasks, creating new roles, and transforming entire industries faster than ever before.
@@ -41,8 +43,6 @@ challenge_body: |-
   Traditional career advice assumes stable job markets and predictable skill demands. But AI is automating tasks, creating new roles, and transforming entire industries faster than ever before.
 
   Students need more than a degree—they need to understand which skills will remain valuable, how to work alongside AI, and how to adapt as the landscape shifts. That's where we come in.
-challenge_image: /images/uploads/students03.png
-schools_button: Learn More About Our Services
 hero_title: AI Ready Institute
 hero_subtitle: Preparing the next generation for an AI-driven world
 ---
