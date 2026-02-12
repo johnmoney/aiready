@@ -338,7 +338,9 @@
       <!-- Left Content -->
 
       <div class="text-center lg:text-left">
-        <h1 id="hero-headline" class="text-4xl sm:text-5xl lg:text-6xl font-[var(--font-family-heading)] font-bold text-[var(--dark-text-color)] leading-tight mb-6"></h1>
+        <h1 id="hero-headline" class="text-4xl sm:text-5xl lg:text-6xl font-[var(--font-family-heading)] font-bold text-[var(--dark-text-color)] leading-tight mb-6">
+ Prepare students for AI Driven Careers with Clarity        
+        </h1>
 
         <p class="text-lg sm:text-xl text-[var(--gray-text-color)] font-[var(--font-family-body)] mb-1 leading-relaxed">
 Because the old way of choosing majors and careers no longer works
@@ -346,21 +348,13 @@ Because the old way of choosing majors and careers no longer works
         <p id="hero-content" class="text-lg sm:text-xl text-[var(--gray-text-color)] font-[var(--font-family-body)] mb-8 leading-relaxed"></p>
 
         <!-- CTA Buttons -->
-
         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
-
-          <a href="mailto:info@aireadyinstitute.org?subject=Free+consultation" class="bg-[var(--primary-color)] text-[var(--primary-button-text-color)] px-8 py-4 rounded-[var(--button-rounded-radius)] font-[var(--font-family-body)] font-semibold hover:bg-[var(--primary-button-hover-bg-color)] transition-all transform hover:scale-105 shadow-lg text-center">
-
-            Get Your Free Consultation
-
+          <a id="hero-button-1" href="mailto:info@aireadyinstitute.org?subject=Free+consultation" class="bg-[var(--primary-color)] text-[var(--primary-button-text-color)] px-8 py-4 rounded-[var(--button-rounded-radius)] font-[var(--font-family-body)] font-semibold hover:bg-[var(--primary-button-hover-bg-color)] transition-all transform hover:scale-105 shadow-lg text-center">
+Get Your Free Consultation
           </a>
-
-          <a href="/" class="bg-white border-2 border-[var(--primary-color)] text-[var(--primary-color)] px-8 py-4 rounded-[var(--button-rounded-radius)] font-[var(--font-family-body)] font-semibold hover:bg-[var(--primary-color)] hover:text-white transition-all text-center">
-
-            Explore Our Services
-
+          <a id="hero-button-2" href="/" class="bg-white border-2 border-[var(--primary-color)] text-[var(--primary-color)] px-8 py-4 rounded-[var(--button-rounded-radius)] font-[var(--font-family-body)] font-semibold hover:bg-[var(--primary-color)] hover:text-white transition-all text-center">
+Explore Our Services
           </a>
-
         </div>
 
         <!-- Trust Signal -->
@@ -369,7 +363,6 @@ Because the old way of choosing majors and careers no longer works
           No commitment required • Free 30-minute strategy session
         </p>
       </div>
-
 
       <!-- Right Image -->
       <div class="relative">
@@ -1195,6 +1188,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       console.log(data);
 
+      // Parse with marked
       let heroHeadlineHtml = marked.parse(data.hero_headline || '', {
         gfm: true,
         breaks: true
@@ -1204,20 +1198,20 @@ document.addEventListener('DOMContentLoaded', () => {
         breaks: true
       });
 
+      // Special handling
       heroHeadlineHtml = heroHeadlineHtml.replace(
         /<strong>(.*?)<\/strong>/g,
         '<span class="text-[var(--primary-color)] font-bold">$1</span>'
       );
 
+      // Inject into DOM
       const heroImgPath = data.hero_image || '/images/uploads/students01.png';  // fallback
       document.getElementById('hero-image').src = "https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master" + heroImgPath;
 
-      // Inject into DOM
-      const heroEl = document.getElementById('hero-headline');
-      if (heroEl) heroEl.innerHTML = heroHeadlineHtml;
-      const heroContentEl = document.getElementById('hero-content');
-      if (heroContentEl) heroContentEl.innerHTML = heroContentHtml;
-
+      document.getElementById('hero-headline').innerHTML = heroHeadlineHtml;
+      document.getElementById('hero-content').innerHTML = heroContentHtml;
+      document.getElementById('hero-button-1').innerHTML = data.hero_button_1;
+      document.getElementById('hero-button-2').innerHTML = data.hero_button_2;
 
     } catch (e) {
       console.error('Content load failed', e);
