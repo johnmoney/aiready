@@ -1,5 +1,9 @@
 ---
 hero_headline: Prepare students for **AI Driven Careers** with Clarity
+hero_content: |-
+  AI has changed the structure of work faster than advising models have changed. Students are now asked to commit to paths that may narrow sooner and recover more slowly than before.
+
+  The AI Ready Institute helps schools, students, and families make decisions that reflect current economic reality—not inherited assumptions.
 stakes_heading: The Stakes Have Never Been Higher
 stakes_body: |-
   AI is transforming every industry...
