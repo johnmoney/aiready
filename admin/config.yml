@@ -19,7 +19,7 @@ collections:
     files:
       - label: "Main Content"
         name: "main"
-        file: "content/home.md"      # we'll create this file next
+        file: "content/home.md"
         fields:
           - {
               label: "Hero Headline",
