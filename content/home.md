@@ -11,8 +11,7 @@ hero_button_1: Get Your Free Consultation
 hero_button_2: Explore Our Services
 stakes_heading: The Stakes Have Never Been Higher
 stakes_body: |-
-  AI is transforming every industry...
-  (paste your paragraph here)
+  AI is reshaping the world of work—and the old rules for choosing majors no longer apply. Students need more than degrees; they need judgment, adaptability, and real-world skills.
 guidance_heading: AI-Informed Guidance
 guidance_desc: Personalized roadmaps...
 learning_heading: x
