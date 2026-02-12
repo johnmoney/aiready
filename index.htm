@@ -946,22 +946,73 @@ Explore Our Services
 <script type="module">
   async function loadContent() {
     try {
-      const res = await fetch('https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master/content/home.md');
+      // Use raw.githubusercontent.com for public repo access (your current URL is fine)
+      const res = await fetch('https://raw.githubusercontent.com/johnmoney/aiready/master/content/home.md');
+      if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
+      
       const text = await res.text();
-      const frontmatter = text.split('---')[1]?.trim() || '';
+      const parts = text.split('---');
+      if (parts.length < 3) throw new Error('No valid frontmatter found');
+      
+      const frontmatterRaw = parts[1].trim();
       const data = {};
 
-      frontmatter.split('\n').forEach(line => {
-        line = line.trim();
-        if (!line || !line.includes(':')) return;
+      const lines = frontmatterRaw.split('\n');
+      let i = 0;
+      while (i < lines.length) {
+        let line = lines[i].trimEnd();  // Keep leading spaces for indent detection
+        if (!line.trim() || !line.includes(':')) {
+          i++;
+          continue;
+        }
 
-        // Split only on the FIRST colon
         const colonIndex = line.indexOf(':');
         const key = line.substring(0, colonIndex).trim();
-        const value = line.substring(colonIndex + 1).trim();
+        let value = line.substring(colonIndex + 1).trim();
 
-        if (key) data[key] = value;
-      });
+        if (value.startsWith('|') || value.startsWith('>')) {
+          // Block scalar detected – collect indented lines
+          const blockIndicator = value[0];
+          const chomp = value.length > 1 && value[1] === '-' ? 'chomp' : 'keep';
+          i++;  // Move past the indicator line
+
+          const blockLines = [];
+          while (i < lines.length) {
+            const nextLine = lines[i];
+            // Stop at next unindented non-empty line (next key)
+            if (nextLine.trim() && !nextLine.startsWith(' ')) {
+              break;
+            }
+            // Keep the line (including trailing newline if literal)
+            blockLines.push(nextLine);
+            i++;
+          }
+
+          // Remove common leading indentation (usually 2 spaces)
+          if (blockLines.length > 0) {
+            const indentMatch = blockLines[0].match(/^( *)/);
+            const commonIndent = indentMatch ? indentMatch[1].length : 0;
+            value = blockLines
+              .map(l => l.substring(commonIndent))
+              .join('\n')
+              .trimEnd();  // .trim() if you want no trailing newlines
+          } else {
+            value = '';
+          }
+
+          // Folded style (>) replaces newlines with spaces
+          if (blockIndicator === '>') {
+            value = value.replace(/\n+/g, ' ').trim();
+          }
+        } else {
+          // Normal scalar – just take the value
+          i++;
+        }
+
+        if (key) {
+          data[key] = value;
+        }
+      }
 
       console.log(data);
 
