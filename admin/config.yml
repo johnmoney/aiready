@@ -44,7 +44,6 @@ collections:
           - {label: "Schools Image", name: "schools_image", widget: "image", required: false}
           - {label: "Schools Heading", name: "schools_heading", widget: "string"}
           - {label: "Schools Content", name: "schools_body", widget: "markdown" }
-          - {label: "Schools Bullet Points", name: "schools_bullets", widget: "list", fields: {label: "Benefit", name: "benefit", widget: "markdown"}}
           - {label: "Schools Button", name: "schools_button", widget: "string"}
           - {label: "Challenge Image", name: "challenge_image", widget: "image", required: false}
           - {label: "Challenge Heading", name: "challenge_heading", widget: "string"}
