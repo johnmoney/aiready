@@ -21,16 +21,28 @@ schools_image: /images/uploads/students02.png
 schools_heading: Partner with AI Ready Institute to Modernize Career Preparation
 schools_body: We work directly with educational institutions to build programs that reflect the realities of today's AI-driven workplace. Your students will graduate with more than credentials—they'll have clarity, confidence, and career readiness.
 schools_bullets:
-  - Curriculum ConsultingAlign your programs with AI trends and employer needs
-schools_button: Learn More About Our Services
-challenge_image: /images/uploads/students03.png
+  - |-
+    **Curriculum Consulting**
+    Align your programs with AI trends and employer needs
+  - |-
+    **Faculty Training**
+    Equip educators with AI literacy and career guidance tools11
+  - |-
+    **Faculty Training**
+    Equip educators with AI literacy and career guidance tools
 challenge_heading: Why AI Changes Everything for Education
-challenge_body: |-
+challenge_intro: |-
   Traditional career advice assumes stable job markets and predictable skill demands. But AI is automating tasks, creating new roles, and transforming entire industries faster than ever before.
 
   Students need more than a degree—they need to understand which skills will remain valuable, how to work alongside AI, and how to adapt as the landscape shifts. That's where we come in.
 cta_button: Book Free Consultation
 cta_text: Ready to get AI Ready? Schedule your free 30-min consultation today.
+challenge_body: |-
+  Traditional career advice assumes stable job markets and predictable skill demands. But AI is automating tasks, creating new roles, and transforming entire industries faster than ever before.
+
+  Students need more than a degree—they need to understand which skills will remain valuable, how to work alongside AI, and how to adapt as the landscape shifts. That's where we come in.
+challenge_image: /images/uploads/students03.png
+schools_button: Learn More About Our Services
 hero_title: AI Ready Institute
 hero_subtitle: Preparing the next generation for an AI-driven world
 ---
