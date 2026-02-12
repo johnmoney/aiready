@@ -1204,7 +1204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         breaks: true
       });
 
-      headlineHtml = headlineHtml.replace(
+      heroHeadlineHtml = heroHeadlineHtml.replace(
         /<strong>(.*?)<\/strong>/g,
         '<span class="text-[var(--primary-color)] font-bold">$1</span>'
       );
@@ -1214,9 +1214,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Inject into DOM
       const heroEl = document.getElementById('hero-headline');
-      if (heroEl) heroEl.innerHTML = headlineHtml;
+      if (heroEl) heroEl.innerHTML = heroHeadlineHtml;
       const heroContentEl = document.getElementById('hero-content');
-      if (heroContentEl) heroContentEl.innerHTML = headlineHtml;
+      if (heroContentEl) heroContentEl.innerHTML = heroContentHtml;
 
 
     } catch (e) {
