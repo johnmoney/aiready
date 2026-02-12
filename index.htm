@@ -1214,9 +1214,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const frontmatter = text.split('---')[1]?.trim() || '';
       const data = {};
 
-      const frontmatter = text.split('---')[1]?.trim() || '';
-      const data = {};
-
       frontmatter.split('\n').forEach(line => {
         line = line.trim();
         if (!line || !line.includes(':')) return;
