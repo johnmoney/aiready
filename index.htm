@@ -1214,7 +1214,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <script type="module">
   async function loadContent() {
     try {
-      const res = await fetch('./content/home.md');
+      const res = await fetch('https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master/content/home.md');
       const text = await res.text();
       const frontmatter = text.split('---')[1]?.trim() || '';
       const data = {};
