@@ -48,6 +48,7 @@ collections:
           - {label: "Learning Description", name: "learning_desc", widget: "markdown"}
           - {label: "Programming Heading", name: "programming_heading", widget: "string"}
           - {label: "Programming Description", name: "programming_desc", widget: "markdown"}
+          - {label: "Schools Image", name: "schools_image", widget: "image", required: false}
           - {label: "For Schools Heading", name: "schools_heading", widget: "string"}
           - {label: "For Schools Bullet Points", name: "schools_bullets", widget: "list", field: {label: "Benefit", name: "benefit", widget: "string"}}
           - {label: "The Challenge Heading", name: "challenge_heading", widget: "string"}

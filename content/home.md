@@ -18,6 +18,7 @@ learning_heading: Applied Learning Models
 learning_desc: Move beyond theory with hands-on programs that teach students to work with AI tools, think critically, and solve real problems.
 programming_heading: Strategic Programming
 programming_desc: Implement long-term strategies that prepare your institution and students for the future of work, not just the present.
+schools_image: /images/uploads/students02.png
 schools_heading: Partner with AI Ready Institute to Modernize Career Preparation
 challenge_heading: Why AI Changes Everything for Education
 challenge_intro: |-

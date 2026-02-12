@@ -314,7 +314,7 @@ Explore Our Services
       <!-- Right Image -->
       <div class="relative">
         <div class="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-          <img id="hero-image" src="https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master/images/uploads/students01.png" alt="Students" data-media="{&quot;id&quot;:&quot;2190479024&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}" class="w-full h-auto">
+          <img id="hero-image" src="https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master/images/uploads/students01.png" alt="Prepare students for AI Driven Careers" class="w-full h-auto">
           <div class="absolute inset-0 bg-gradient-to-t from-[var(--primary-color)] to-transparent opacity-20"></div>
         </div>
         <!-- Floating Stats -->
@@ -338,11 +338,8 @@ Explore Our Services
   </div>
 </section>
 
-<div id="seb10z">
-<section class="code-section py-16 sm:py-24 bg-white" id="seb10z">
-
+<section class="code-section py-16 sm:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
     <!-- Section Header -->
     <div class="text-center mb-16">
       <h2 id="stakes-heading" class="text-3xl sm:text-4xl lg:text-5xl font-[var(--font-family-heading)] font-bold text-[var(--dark-text-color)] mb-4">
@@ -352,7 +349,6 @@ The Stakes Have Never Been Higher
 AI is reshaping the world of work—and the old rules for choosing majors no longer apply. Students need more than degrees; they need judgment, adaptability, and real-world skills.
       </p>
     </div>
-
     <!-- Three Column Grid -->
     <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
       <!-- Card 1 -->
@@ -395,40 +391,23 @@ Implement long-term strategies that prepare your institution and students for th
   </div>
 </section>
 
-<div id="sm3in3u"><section class="code-section py-16 sm:py-24 bg-gradient-to-br from-[var(--medium-background-color)] to-[var(--light-background-color)] relative overflow-hidden" id="sm3in3u">
-
+<div id="sm3in3u">
+<section class="code-section py-16 sm:py-24 bg-gradient-to-br from-[var(--medium-background-color)] to-[var(--light-background-color)] relative overflow-hidden">
   <!-- Background Pattern -->
-
   <div class="absolute inset-0 opacity-5">
-
     <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle, var(--primary-color) 1px, transparent 1px); background-size: 30px 30px;"></div>
-
   </div>
 
-
-
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
     <div class="grid lg:grid-cols-2 gap-12 items-center">
-
       <!-- Left Image -->
-
       <div class="order-2 lg:order-1">
-
         <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-
-          <img src="https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master/images/uploads/students02.png" alt="Students" data-media="{&quot;id&quot;:&quot;2190479026&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}" class="w-full h-auto">
-
+          <img id="schools-image" src="https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master/images/uploads/students02.png" alt="Students" data-media="{&quot;id&quot;:&quot;2190479026&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}" class="w-full h-auto">
           <div class="absolute inset-0 bg-gradient-to-tr from-[var(--primary-color)] to-transparent opacity-10"></div>
-
         </div>
-
       </div>
-
-
-
       <!-- Right Content -->
-
       <div class="order-1 lg:order-2">
 
         <div class="inline-block bg-[var(--accent2-color)] text-white px-4 py-2 rounded-full font-[var(--font-family-body)] font-semibold text-sm mb-6">
@@ -897,6 +876,7 @@ Implement long-term strategies that prepare your institution and students for th
 
       // Inject into DOM
       document.getElementById('hero-image').src = "https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master" + data.hero_image || '/images/uploads/students01.png';
+      document.getElementById('schools-image').src = "https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master" + data.schools_image || '/images/uploads/students02.png';
 
       let heroHeadlineHtml = marked.parse(data.hero_headline || '', { gfm: true, breaks: true }).replace(
         /<strong>(.*?)<\/strong>/g,
@@ -907,7 +887,13 @@ Implement long-term strategies that prepare your institution and students for th
       document.getElementById('hero-button-1').innerHTML = data.hero_button_1 || '';
       document.getElementById('hero-button-2').innerHTML = data.hero_button_2 || '';
       document.getElementById('stakes-heading').innerHTML = data.stakes_heading || '';
-      document.getElementById('stakes-body').innerHTML = data.stakes_body || '';
+      document.getElementById('stakes-body').innerHTML = marked.parse(data.stakes_body || '', { gfm: true, breaks: true });
+      document.getElementById('guidance-heading').innerHTML = data.guidance_heading || '';
+      document.getElementById('guidance-desc').innerHTML = marked.parse(data.guidance_desc || '', { gfm: true, breaks: true });
+      document.getElementById('learning-heading').innerHTML = data.learning_heading || '';
+      document.getElementById('learning-desc').innerHTML = marked.parse(data.learning_desc || '', { gfm: true, breaks: true });
+      document.getElementById('programming-heading').innerHTML = data.programming_heading || '';
+      document.getElementById('programming-desc').innerHTML = marked.parse(data.programming_desc || '', { gfm: true, breaks: true });
 
     } catch (e) {
       console.error('Content load failed', e);
