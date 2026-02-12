@@ -7,7 +7,6 @@ hero_content: |-
   The AI Ready Institute helps schools, students, and families make decisions that reflect current economic reality—not inherited assumptions.
 hero_button_1: Get Your Free Consultation
 hero_button_2: Explore Our Services
-
 stakes_heading: The Stakes Have Never Been Higher
 stakes_body: |-
   AI is transforming every industry...

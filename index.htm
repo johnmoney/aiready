@@ -966,30 +966,17 @@ Explore Our Services
 
       console.log(data);
 
-      // Parse with marked
-      let heroHeadlineHtml = marked.parse(data.hero_headline || '', {
-        gfm: true,
-        breaks: true
-      });
-      let heroContentHtml = marked.parse(data.hero_content || '', {
-        gfm: true,
-        breaks: true
-      });
+      // Inject into DOM
+      document.getElementById('hero-image').src = "https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master" + data.hero_image || '/images/uploads/students01.png';
 
-      // Special handling
-      heroHeadlineHtml = heroHeadlineHtml.replace(
+      let heroHeadlineHtml = marked.parse(data.hero_headline || '', { gfm: true, breaks: true }).replace(
         /<strong>(.*?)<\/strong>/g,
         '<span class="text-[var(--primary-color)] font-bold">$1</span>'
       );
-
-      // Inject into DOM
-      const heroImgPath = data.hero_image || '/images/uploads/students01.png';  // fallback
-      document.getElementById('hero-image').src = "https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master" + heroImgPath;
-
       document.getElementById('hero-headline').innerHTML = heroHeadlineHtml;
-      document.getElementById('hero-content').innerHTML = heroContentHtml;
-      document.getElementById('hero-button-1').innerHTML = data.hero_button_1;
-      document.getElementById('hero-button-2').innerHTML = data.hero_button_2;
+      document.getElementById('hero-content').innerHTML = marked.parse(data.hero_content || '', { gfm: true, breaks: true });
+      document.getElementById('hero-button-1').innerHTML = data.hero_button_1 || '';
+      document.getElementById('hero-button-2').innerHTML = data.hero_button_2 || '';
 
     } catch (e) {
       console.error('Content load failed', e);
