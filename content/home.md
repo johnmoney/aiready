@@ -10,8 +10,7 @@ hero_content: |-
 hero_button_1: Get Your Free Consultation
 hero_button_2: Explore Our Services
 stakes_heading: The Stakes Have Never Been Higher
-stakes_body: |-
-  AI is reshaping the world of work—and the old rules for choosing majors no longer apply. Students need more than degrees; they need judgment, adaptability, and real-world skills.
+stakes_body: AI is reshaping the world of work—and the old rules for choosing majors no longer apply. Students need more than degrees; they need judgment, adaptability, and real-world skills.
 guidance_heading: AI-Informed Guidance
 guidance_desc: Help students understand which careers will thrive, which will transform, and which skills will remain irreplaceable in an AI-driven economy.
 learning_heading: Applied Learning Models
@@ -20,8 +19,9 @@ programming_heading: Strategic Programming
 programming_desc: Implement long-term strategies that prepare your institution and students for the future of work, not just the present.
 schools_image: /images/uploads/students02.png
 schools_heading: Partner with AI Ready Institute to Modernize Career Preparation
-schools_body:  |-
-  We work directly with educational institutions to build programs that reflect the realities of today's AI-driven workplace. Your students will graduate with more than credentials—they'll have clarity, confidence, and career readiness.
+schools_body: We work directly with educational institutions to build programs that reflect the realities of today's AI-driven workplace. Your students will graduate with more than credentials—they'll have clarity, confidence, and career readiness.
+schools_bullets:
+  - Test
 challenge_heading: Why AI Changes Everything for Education
 challenge_intro: |-
   Traditional career advice assumes stable job markets and predictable skill demands. But AI is automating tasks, creating new roles, and transforming entire industries faster than ever before.
