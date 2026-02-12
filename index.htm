@@ -1223,11 +1223,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (key?.trim()) data[key.trim()] = valueParts.join(':').trim();
       });
 
+      console.log(data);
+
       // Parse markdown field to HTML
       let headlineHtml = marked.parse(data.hero_headline || '', {
         gfm: true,
         breaks: true
       });
+      console.log(headlineHtml);
 
       // Replace <strong> with colored span (your CSS var)
       headlineHtml = headlineHtml.replace(
@@ -1237,7 +1240,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Inject into DOM
       const heroEl = document.getElementById('hero-headline');
-      if (heroEl) heroEl.innerHTML = "test " + headlineHtml;
+      if (heroEl) heroEl.innerHTML = headlineHtml;
 
 
     } catch (e) {
