@@ -44,7 +44,7 @@ collections:
           - {label: "Schools Image", name: "schools_image", widget: "image", required: false}
           - {label: "Schools Heading", name: "schools_heading", widget: "string"}
           - {label: "Schools Content", name: "schools_body", widget: "markdown" }
-          - {label: "For Schools Bullet Points", name: "schools_bullets", widget: "list", field: {label: "Benefit", name: "benefit", widget: "string"}}
+          - {label: "Schools Bullet Points", name: "schools_bullets", widget: "list", field: {label: "Benefit", name: "benefit", widget: "markdown"}}
           - {label: "The Challenge Heading", name: "challenge_heading", widget: "string"}
           - {label: "Challenge Intro Text", name: "challenge_intro", widget: "markdown"}
           - {label: "Challenge Stats / Bullets", name: "challenge_stats", widget: "list", field: {label: "Stat", name: "stat", widget: "string"}}
