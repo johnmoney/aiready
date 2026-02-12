@@ -29,6 +29,14 @@ collections:
               buttons: ["bold", "italic", "link"],
               modes: ["rich_text", "raw"]
             }
+          - {
+              label: "Hero Content",
+              name: "hero_content",
+              widget: "markdown",
+              default: "",
+              buttons: ["bold", "italic", "link"],
+              modes: ["rich_text", "raw"]
+            }
           - {label: "The Stakes Heading", name: "stakes_heading", widget: "string"}
           - {label: "The Stakes Body Text", name: "stakes_body", widget: "markdown"}
           - {label: "Guidance Heading", name: "guidance_heading", widget: "string"}

@@ -343,12 +343,7 @@
         <p class="text-lg sm:text-xl text-[var(--gray-text-color)] font-[var(--font-family-body)] mb-1 leading-relaxed">
 Because the old way of choosing majors and careers no longer works
         </p>
-        <p class="text-lg sm:text-xl text-[var(--gray-text-color)] font-[var(--font-family-body)] mb-8 leading-relaxed">
-
-AI has changed the structure of work faster than advising models have changed. Students are now asked to commit to paths that may narrow sooner and recover more slowly than before.
-
-The AI Ready Institute helps schools, students, and families make decisions that reflect current economic reality—not inherited assumptions.
-        </p>
+        <p id="hero-content" class="text-lg sm:text-xl text-[var(--gray-text-color)] font-[var(--font-family-body)] mb-8 leading-relaxed"></p>
 
         <!-- CTA Buttons -->
 
@@ -1218,21 +1213,33 @@ document.addEventListener('DOMContentLoaded', () => {
       const text = await res.text();
       const frontmatter = text.split('---')[1]?.trim() || '';
       const data = {};
+
+      const frontmatter = text.split('---')[1]?.trim() || '';
+      const data = {};
+
       frontmatter.split('\n').forEach(line => {
-        const [key, ...valueParts] = line.split(/:(.+)/);
-        if (key?.trim()) data[key.trim()] = valueParts.join(':').trim();
+        line = line.trim();
+        if (!line || !line.includes(':')) return;
+
+        // Split only on the FIRST colon
+        const colonIndex = line.indexOf(':');
+        const key = line.substring(0, colonIndex).trim();
+        const value = line.substring(colonIndex + 1).trim();
+
+        if (key) data[key] = value;
       });
 
       console.log(data);
 
-      // Parse markdown field to HTML
-      let headlineHtml = marked.parse(data.hero_headline || '', {
+      let heroHeadlineHtml = marked.parse(data.hero_headline || '', {
         gfm: true,
         breaks: true
       });
-      console.log(headlineHtml);
+      let heroContentHtml = marked.parse(data.hero_content || '', {
+        gfm: true,
+        breaks: true
+      });
 
-      // Replace <strong> with colored span (your CSS var)
       headlineHtml = headlineHtml.replace(
         /<strong>(.*?)<\/strong>/g,
         '<span class="text-[var(--primary-color)] font-bold">$1</span>'
@@ -1241,6 +1248,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Inject into DOM
       const heroEl = document.getElementById('hero-headline');
       if (heroEl) heroEl.innerHTML = headlineHtml;
+      const heroContentEl = document.getElementById('hero-content');
+      if (heroContentEl) heroContentEl.innerHTML = headlineHtml;
 
 
     } catch (e) {
