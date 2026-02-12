@@ -7,8 +7,8 @@ hero_content: |-
   AI has changed the structure of work faster than advising models have changed. Students are now asked to commit to paths that may narrow sooner and recover more slowly than before.
 
   The AI Ready Institute helps schools, students, and families make decisions that reflect current economic reality—not inherited assumptions.
-hero_button_1: Get Your Free Consultation
-hero_button_2: Explore Our Services
+schoolsro_image: /images/uploads/students01.pnghero_button_1: Get Your Free Consultation
+hero_btton_2: Explore Our Services
 stakes_heading: The Stakes Have Never Been Higher
 stakes_body: |-
   AI is reshaping the world of work—and the old rules for choosing majors no longer apply. Students need more than degrees; they need judgment, adaptability, and real-world skills.
@@ -20,6 +20,8 @@ programming_heading: Strategic Programming
 programming_desc: Implement long-term strategies that prepare your institution and students for the future of work, not just the present.
 schools_image: /images/uploads/students02.png
 schools_heading: Partner with AI Ready Institute to Modernize Career Preparation
+schools_body: |-
+  We work directly with educational institutions to build programs that reflect the realities of today's AI-driven workplace. Your students will graduate with more than credentials—they'll have clarity, confidence, and career readiness.
 challenge_heading: Why AI Changes Everything for Education
 challenge_intro: |-
   Traditional career advice assumes stable job markets and predictable skill demands. But AI is automating tasks, creating new roles, and transforming entire industries faster than ever before.

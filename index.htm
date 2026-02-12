@@ -397,7 +397,6 @@ Implement long-term strategies that prepare your institution and students for th
   <div class="absolute inset-0 opacity-5">
     <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle, var(--primary-color) 1px, transparent 1px); background-size: 30px 30px;"></div>
   </div>
-
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <!-- Left Image -->
@@ -409,36 +408,15 @@ Implement long-term strategies that prepare your institution and students for th
       </div>
       <!-- Right Content -->
       <div class="order-1 lg:order-2">
-
         <div class="inline-block bg-[var(--accent2-color)] text-white px-4 py-2 rounded-full font-[var(--font-family-body)] font-semibold text-sm mb-6">
-
           <i class="fa-solid fa-star mr-2" aria-hidden="true"></i>For Schools &amp; Colleges
-
         </div>
-
-
-
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-[var(--font-family-heading)] font-bold text-[var(--dark-text-color)] mb-6 leading-tight">
-
-          Partner with AI Ready Institute to Modernize Career Preparation
-
+        <h2 id="schools-heading" class="text-3xl sm:text-4xl lg:text-5xl font-[var(--font-family-heading)] font-bold text-[var(--dark-text-color)] mb-6 leading-tight">
+Partner with AI Ready Institute to Modernize Career Preparation
         </h2>
-
-
-
-        <p class="text-lg text-[var(--gray-text-color)] font-[var(--font-family-body)] mb-8 leading-relaxed">
-
-          We work directly with educational institutions to build programs that
-
-          reflect the realities of today's AI-driven workplace. Your students
-
-          will graduate with more than credentials—they'll have clarity,
-
-          confidence, and career readiness.
-
+        <p id="schools-body" class="text-lg text-[var(--gray-text-color)] font-[var(--font-family-body)] mb-8 leading-relaxed">
+We work directly with educational institutions to build programs that reflect the realities of today's AI-driven workplace. Your students will graduate with more than credentials—they'll have clarity, confidence, and career readiness.
         </p>
-
-
 
         <!-- Benefits List -->
 
@@ -882,6 +860,7 @@ Implement long-term strategies that prepare your institution and students for th
         /<strong>(.*?)<\/strong>/g,
         '<span class="text-[var(--primary-color)] font-bold">$1</span>'
       );
+
       document.getElementById('hero-headline').innerHTML = heroHeadlineHtml;
       document.getElementById('hero-content').innerHTML = marked.parse(data.hero_content || '', { gfm: true, breaks: true });
       document.getElementById('hero-button-1').innerHTML = data.hero_button_1 || '';
@@ -894,6 +873,8 @@ Implement long-term strategies that prepare your institution and students for th
       document.getElementById('learning-desc').innerHTML = marked.parse(data.learning_desc || '', { gfm: true, breaks: true });
       document.getElementById('programming-heading').innerHTML = data.programming_heading || '';
       document.getElementById('programming-desc').innerHTML = marked.parse(data.programming_desc || '', { gfm: true, breaks: true });
+      document.getElementById('schools-heading').innerHTML = data.schools_heading || '';
+      document.getElementById('schools-body').innerHTML = marked.parse(data.schools_body || '', { gfm: true, breaks: true });
 
     } catch (e) {
       console.error('Content load failed', e);

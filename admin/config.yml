@@ -30,14 +30,7 @@ collections:
               buttons: ["bold", "italic", "link"],
               modes: ["rich_text", "raw"]
             }
-          - {
-              label: "Hero Content",
-              name: "hero_content",
-              widget: "markdown",
-              default: "",
-              buttons: ["bold", "italic", "link"],
-              modes: ["rich_text", "raw"]
-            }
+          - {label: "Hero Content", name: "hero_content", widget: "markdown" }
           - {label: "Hero Button 1", name: "hero_button_1", widget: "string"}
           - {label: "Hero Button 2", name: "hero_button_2", widget: "string"}
           - {label: "Stakes Heading", name: "stakes_heading", widget: "string"}
@@ -49,7 +42,8 @@ collections:
           - {label: "Programming Heading", name: "programming_heading", widget: "string"}
           - {label: "Programming Description", name: "programming_desc", widget: "markdown"}
           - {label: "Schools Image", name: "schools_image", widget: "image", required: false}
-          - {label: "For Schools Heading", name: "schools_heading", widget: "string"}
+          - {label: "Schools Heading", name: "schools_heading", widget: "string"}
+          - {label: "Schools Content", name: "schools_body", widget: "markdown" }
           - {label: "For Schools Bullet Points", name: "schools_bullets", widget: "list", field: {label: "Benefit", name: "benefit", widget: "string"}}
           - {label: "The Challenge Heading", name: "challenge_heading", widget: "string"}
           - {label: "Challenge Intro Text", name: "challenge_intro", widget: "markdown"}
