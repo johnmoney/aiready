@@ -22,8 +22,10 @@ schools_heading: Partner with AI Ready Institute to Modernize Career Preparation
 schools_body: We work directly with educational institutions to build programs that reflect the realities of today's AI-driven workplace. Your students will graduate with more than credentials—they'll have clarity, confidence, and career readiness.
 schools_bullets:
   - Curriculum ConsultingAlign your programs with AI trends and employer needs
+schools_button: Learn More About Our Services
+challenge_image: /images/uploads/students03.png
 challenge_heading: Why AI Changes Everything for Education
-challenge_intro: |-
+challenge_body: |-
   Traditional career advice assumes stable job markets and predictable skill demands. But AI is automating tasks, creating new roles, and transforming entire industries faster than ever before.
 
   Students need more than a degree—they need to understand which skills will remain valuable, how to work alongside AI, and how to adapt as the landscape shifts. That's where we come in.
