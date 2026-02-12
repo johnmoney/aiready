@@ -6,9 +6,9 @@ backend:
   # Optional: squash commits for cleaner history
   squash_merges: true
 
-# Media (images) — add if/when you want uploads
 media_folder: "images/uploads"     # where images save in repo
 public_folder: "/images/uploads"   # how they're served on site
+media_library:
 
 # Optional: enable drafts/review workflow (recommended for safety)
 publish_mode: editorial_workflow
@@ -21,6 +21,7 @@ collections:
         name: "main"
         file: "content/home.md"
         fields:
+          - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
           - {
               label: "Hero Headline",
               name: "hero_headline",

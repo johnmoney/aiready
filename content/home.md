@@ -1,4 +1,5 @@
 ---
+hero_image: /images/uploads/students01.png
 hero_headline: Prepare students for **AI Driven Careers** with Clarity
 hero_content: |-
   AI has changed the structure of work faster than advising models have changed. Students are now asked to commit to paths that may narrow sooner and recover more slowly than before.

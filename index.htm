@@ -363,74 +363,41 @@ Because the old way of choosing majors and careers no longer works
 
         </div>
 
-
-
         <!-- Trust Signal -->
-
         <p class="text-sm text-[var(--gray-text-color)] font-[var(--font-family-body)]">
-
           <i class="fa-solid fa-check-circle text-[var(--accent2-color)] mr-2" aria-hidden="true"></i>
-
           No commitment required • Free 30-minute strategy session
-
         </p>
-
       </div>
-
 
 
       <!-- Right Image -->
-
       <div class="relative">
-
         <div class="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-
-          <img src="https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master/images/uploads/students01.png" alt="Students" data-media="{&quot;id&quot;:&quot;2190479024&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}" class="w-full h-auto">
-
+          <img id="hero-image" src="https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master/images/uploads/students01.png" alt="Students" data-media="{&quot;id&quot;:&quot;2190479024&quot;,&quot;src&quot;:&quot;iStock&quot;,&quot;type&quot;:&quot;image&quot;}" class="w-full h-auto">
           <div class="absolute inset-0 bg-gradient-to-t from-[var(--primary-color)] to-transparent opacity-20"></div>
-
         </div>
-
-
 
         <!-- Floating Stats -->
-
         <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 backdrop-blur-sm border border-[var(--light-border-color)] hidden sm:block">
-
           <div class="flex items-center gap-3">
-
             <div class="w-12 h-12 bg-[var(--accent2-color)] rounded-full flex items-center justify-center">
-
               <i class="fa-solid fa-graduation-cap text-white text-xl" aria-hidden="true"></i>
-
             </div>
-
             <div>
-
               <p class="text-2xl font-bold text-[var(--dark-text-color)] font-[var(--font-family-heading)]">
-
                 100%
-
               </p>
-
               <p class="text-sm text-[var(--gray-text-color)] font-[var(--font-family-body)]">
-
                 Career Ready
-
               </p>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
 
     </div>
-
   </div>
-
 </section>
 
 </div><div class="code-section-controls relative hidden"><div class="absolute top-[-40px] z-50 h-20 w-full"><div class="flex h-full items-center justify-center space-x-1 sm:space-x-4"><button class="rounded border border-blue-800 bg-blue-500 px-1 py-2 text-xs text-white sm:px-4 sm:text-base"><i class="fa-regular fa-arrow-down mr-2" aria-hidden="true"></i><span>Move Down</span></button><button class="rounded border border-blue-800 bg-blue-500 px-1 py-2 text-xs text-white sm:px-4 sm:text-base"><i class="fa-regular fa-trash mr-2" aria-hidden="true"></i><span>Delete Section</span></button></div></div></div><div class="code-section-controls relative hidden"><div class="absolute top-[-40px] z-50 h-20 w-full"><div class="flex h-full items-center justify-center space-x-1 sm:space-x-4"><button class="rounded border border-blue-800 bg-blue-500 px-1 py-2 text-xs text-white sm:px-4 sm:text-base"><i class="fa-regular fa-arrow-up mr-2" aria-hidden="true"></i><span>Move Up</span></button><button class="rounded border border-blue-800 bg-blue-500 px-1 py-2 text-xs text-white sm:px-4 sm:text-base"><i class="fa-regular fa-arrow-down mr-2" aria-hidden="true"></i><span>Move Down</span></button><button class="rounded border border-blue-800 bg-blue-500 px-1 py-2 text-xs text-white sm:px-4 sm:text-base"><i class="fa-regular fa-trash mr-2" aria-hidden="true"></i><span>Delete Section</span></button></div></div></div><div id="seb10z"><section class="code-section py-16 sm:py-24 bg-white" id="seb10z">
@@ -1241,6 +1208,9 @@ document.addEventListener('DOMContentLoaded', () => {
         /<strong>(.*?)<\/strong>/g,
         '<span class="text-[var(--primary-color)] font-bold">$1</span>'
       );
+
+      const heroImgPath = data.hero_image || '/images/uploads/students01.png';  // fallback
+      document.getElementById('hero-image').src = "https://raw.githubusercontent.com/johnmoney/aiready/refs/heads/master" + heroImgPath;
 
       // Inject into DOM
       const heroEl = document.getElementById('hero-headline');
